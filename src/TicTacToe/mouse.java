@@ -1,4 +1,4 @@
-package Ch7.tictactoe;
+package TicTacToe;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;

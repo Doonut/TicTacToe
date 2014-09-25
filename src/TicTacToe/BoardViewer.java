@@ -1,4 +1,4 @@
-package Ch7.tictactoe;
+package TicTacToe;
 
 import javax.swing.JFrame;
 

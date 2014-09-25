@@ -1,4 +1,4 @@
-package Ch7.tictactoe;
+package TicTacToe;
 
 public class Win {
 	public static int winner = 0;
