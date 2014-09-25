@@ -1,4 +1,4 @@
 TicTacToe
 =========
 
-Small TicTacToe Java Game
+A Small TicTacToe Java Game
