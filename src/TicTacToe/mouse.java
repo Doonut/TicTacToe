@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 
 class mouse extends JPanel implements MouseListener,
 MouseMotionListener {
+  private static final long serialVersionUID = 7526472293464776147L;
   private int i = 0;
   private static int input;
   private static boolean initCanRun = false;
@@ -43,9 +44,10 @@ MouseMotionListener {
   
   private void getPosition(int x, int y){
     for(int i = 0; i < 9; ++i){
-      int w = (i % 3) * Board.width;
-      int h = (i / 3) * Board.width;
-      if(x >= w && x <= (w + Board.width) && y >= h && y <= (h + Board.width)){
+      int w = (i % 3) * Board.getWidth();
+      int h = (i / 3) * Board.getWidth();
+      if(x >= w && x <= (w + Board.getWidth()) &&
+          y >= h && y <= (h + Board.getWidth())){
         setInput(i);
       }
     }
@@ -76,17 +78,17 @@ MouseMotionListener {
         X LetterX = new X(input);
         LetterX.draw(g2);
       }
-    }   
+    }
     ++i;
     
     Win.winCalc();
   
   	if(Win.winner != 0 || tie == true){
-  		Graphics2D g3 = (Graphics2D) g;
-  		DisplayWinner winDisp = new DisplayWinner();
-  		winDisp.draw(g3);
+  		DisplayWinner winDisp = new DisplayWinner(g2);
   	}
   }
+
+  //Unused Functions
   public void mouseClicked(MouseEvent me) {}
   public void mouseEntered(MouseEvent me) {}
   public void mouseExited(MouseEvent me) {}

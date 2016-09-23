@@ -23,8 +23,8 @@ public class X {
 	}
 
 	private void makeLines(){
-		int w = (this.c % 3) * Board.width;
-		int h = (this.c / 3) * Board.width;
+		int w = (this.c % 3) * Board.getWidth();
+		int h = (this.c / 3) * Board.getWidth();
 		LetterXL1 = new Line2D.Double(35 + w,35 + h,115 + w,115 + h);
 		LetterXL2 = new Line2D.Double(115 + w,35 + h,35 + w,115 + h);
 	}

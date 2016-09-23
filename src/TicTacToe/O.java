@@ -22,8 +22,8 @@ public class O {
 	}
 
 	private void makeEllipse(){
-		int w = (this.c % 3) * Board.width;
-		int h = (this.c / 3) * Board.width;
+		int w = (this.c % 3) * Board.getWidth();
+		int h = (this.c / 3) * Board.getWidth();
 		LetterO = new Ellipse2D.Double(23 + w,23 + h,100,100);
 	}
 
