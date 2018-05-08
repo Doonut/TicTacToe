@@ -1,4 +1,4 @@
-package TicTacToe;
+package com.Donut.TicTacToe;
 
 public class Win {
 	public static int winner = 0;

@@ -1,8 +1,8 @@
-package TicTacToe;
+package com.Donut.TicTacToe;
 
 import javax.swing.JFrame;
 
-public class BoardViewer{
+public class App{
 public static void main(String[] args) {
 	    JFrame aWindow = new JFrame();
 	    aWindow.setSize(467, 490);

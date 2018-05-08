@@ -1,4 +1,4 @@
-package TicTacToe;
+package com.Donut.TicTacToe;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;

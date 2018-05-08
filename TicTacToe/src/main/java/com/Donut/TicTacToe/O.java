@@ -1,36 +1,34 @@
-package TicTacToe;
+package com.Donut.TicTacToe;
 
+import java.awt.geom.Ellipse2D;
 import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Stroke;
 import java.awt.BasicStroke;
-import java.awt.geom.Line2D;
 
-public class X {
+public class O {
 	private int c;
-	private Line2D.Double LetterXL1, LetterXL2;
+	private Ellipse2D.Double LetterO;
 
-	public X(int c){
+	public O(int c){
 		this.c = c;
 	}
 
 	private void drawGraphics(Graphics2D g){
 		Stroke stroke = new BasicStroke(10);
 		g.setStroke(stroke);
-		g.setColor(Color.blue);
-		g.draw(LetterXL1);
-		g.draw(LetterXL2);
+		g.setColor(Color.red);
+		g.draw(LetterO);
 	}
 
-	private void makeLines(){
+	private void makeEllipse(){
 		int w = (this.c % 3) * Board.getWidth();
 		int h = (this.c / 3) * Board.getWidth();
-		LetterXL1 = new Line2D.Double(35 + w,35 + h,115 + w,115 + h);
-		LetterXL2 = new Line2D.Double(115 + w,35 + h,35 + w,115 + h);
+		LetterO = new Ellipse2D.Double(23 + w,23 + h,100,100);
 	}
 
 	public void draw(Graphics2D g){
-		makeLines();
+		makeEllipse();
 		drawGraphics(g);
 	}
 }
