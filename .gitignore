@@ -39,3 +39,7 @@ bin/
 
 # Build Files
 *.class
+*.AppTest.xml
+*.AppTest.txt
+*.lst
+TicTacToe*.jar
